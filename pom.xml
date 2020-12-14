@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
+    <!--<parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.3.0.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
+        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;
+    </parent>-->
 
     <groupId>com.wyq</groupId>
     <artifactId>study</artifactId>
@@ -26,31 +26,46 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
-
         <java.version>1.8</java.version>
+        <springboot.version>2.1.0.RELEASE</springboot.version>
     </properties>
     <modules>
         <module>kafka</module>
         <module>redis</module>
         <module>hadoop</module>
+        <module>zookeeper</module>
+        <module>flink</module>
+        <module>socket</module>
+        <module>java</module>
+        <module>mybatis</module>
+        <module>leetcode</module>
+        <module>util</module>
+        <module>db</module>
+        <module>spark</module>
+        <module>livy</module>
+        <module>hbase</module>
+        <module>presto</module>
+        <module>druid</module>
+        <module>common</module>
+        <module>hive</module>
+        <module>storm</module>
+        <module>dubbo</module>
+        <module>springcloud</module>
     </modules>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>18.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.4</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -58,5 +73,21 @@
         </dependency>
 
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.wyq</groupId>
+                <artifactId>study.dubbo.facade</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>

@@ -18,7 +18,7 @@ public class SpringRedisApplicationTests {
 
     @Test
     public void testSet() {
-       redisTemplate.opsForValue().set("bb", "cc");
+       redisTemplate.opsForValue().set("bb", "dd");
     }
 
     @Test

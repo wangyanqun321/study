@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -23,9 +24,16 @@ public class RedisApplication {
         SpringApplication.run(RedisApplication.class);
     }
 
-    @GetMapping("/test")
+    @GetMapping("/test-get")
     public String testGet() {
-        stringRedisTemplate.opsForValue().set("aa", "bb");
+        System.out.println("test get");
+        return stringRedisTemplate.opsForValue().get("aa");
+    }
+
+    @GetMapping("/test-set")
+    public String testSet(String value) {
+        System.out.println("test set");
+        stringRedisTemplate.opsForValue().set("aa", value);
         return "test";
     }
 

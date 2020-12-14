@@ -1,0 +1,11 @@
+create 'student', 'c1', 'c2'
+create 'person', {NAME => 'f1', VERSION => 5}
+
+put 'student', '1', 'c1:name', 'Tom'
+put 'student', '1', 'c1:name', 'Jerry'
+put 'student', '1', 'c1:age', '17'
+get 'student','1'
+get 'student', '1', {COLUMN=>'c1:name'}
+get 'student', '1', {COLUMN=>'c2:name'}
+get 'student', '1', {COLUMN=>'c1:age'}
+put 'student', '2', 'c1:name', 'wyq'

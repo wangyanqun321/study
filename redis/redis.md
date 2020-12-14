@@ -62,3 +62,10 @@ setnx: 设置值，值存在则设置失败 (分布式锁常用)
 getset: 先获取在设置新的值
 watch 可以实现乐观锁
 ```
+### 主从复制
+```
+# 查看副本信息
+info replication
+1. 命令配置
+SLAVEOF hadoop001 6379 # SLAVEOF 主节点host ip
+```

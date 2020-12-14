@@ -6,9 +6,34 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="redis" />
+        <module name="common" />
+        <module name="mybatis" />
+        <module name="connector" />
+        <module name="springcloud" />
+        <module name="livy" />
+        <module name="presto" />
+        <module name="oracle" />
+        <module name="util" />
+        <module name="druid" />
+        <module name="socket" />
+        <module name="redissession" />
+        <module name="hive" />
+        <module name="mysql" />
+        <module name="studydubboconsumer" />
+        <module name="flink-common" />
         <module name="hadoop" />
+        <module name="zookeeper" />
+        <module name="sqlserver" />
+        <module name="springboot" />
+        <module name="java" />
+        <module name="leetcode" />
+        <module name="studydubbofacade" />
+        <module name="hbase" />
         <module name="kafka" />
+        <module name="postgresql" />
+        <module name="spark" />
+        <module name="storm" />
+        <module name="studydubboprovider" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,10 +42,15 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="hadoop" options="-parameters" />
-      <module name="kafka" options="-parameters" />
+      <module name="flink" options="" />
+      <module name="hadoop" options="" />
+      <module name="kafka" options="" />
+      <module name="mybatis" options="-parameters" />
       <module name="redis" options="-parameters" />
+      <module name="redissession" options="-parameters" />
       <module name="spring-redis" options="-parameters" />
+      <module name="springboot" options="-parameters" />
+      <module name="zookeeper" options="" />
     </option>
   </component>
 </project>

@@ -1,7 +1,6 @@
 package com.wyq.kafka;
 
 import com.google.common.collect.Lists;
-import kafka.javaapi.consumer.SimpleConsumer;
 
 import java.util.List;
 
